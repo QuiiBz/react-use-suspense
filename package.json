@@ -1,0 +1,75 @@
+{
+  "name": "react-use-suspense",
+  "version": "0.0.0",
+  "description": "Description",
+  "author": "Tom Lienard",
+  "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuiiBz/react-use-suspense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/QuiiBz/react-use-suspense/issues"
+  },
+  "homepage": "https://github.com/QuiiBz/react-use-suspense#readme",
+  "scripts": {
+    "dev": "concurrently 'pnpm:dev:*'",
+    "dev:js": "node ./build.js -sourcemap -watch",
+    "dev:types": "tsc --outDir dist src/index.ts --declaration --emitDeclarationOnly --watch",
+    "build": "concurrently 'pnpm:build:*'",
+    "build:js": "node ./build.js",
+    "build:types": "tsc --outDir dist src/index.ts --declaration --emitDeclarationOnly",
+    "test": "pnpm test:eslint && yarn test:jest",
+    "test:eslint": "eslint --cache --fix '*.js' '{src,__tests__}/**/*.{js,ts,tsx}'",
+    "test:jest": "jest --no-watchman",
+    "release:patch": "pnpm build && release patch",
+    "release:minor": "pnpm build && release minor",
+    "release:major": "pnpm build && release major",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=6"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.34",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "concurrently": "^6.3.0",
+    "esbuild": "^0.13.12",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.26.1",
+    "estrella": "^1.4.1",
+    "husky": ">=6",
+    "jest": "^27.3.1",
+    "lint-staged": ">=10",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "release": "^6.3.0",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
