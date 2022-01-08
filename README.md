@@ -74,7 +74,7 @@ function Component() {
 
 When you need to use this component, simply wrap it inside a `Suspense` component and provide a `fallback` prop:
 
-```
+```tsx
 function App() {
   return (
     <Suspense fallback="Loading...">
