@@ -4,7 +4,7 @@ Thanks for contributing!
 
 ## Issues contribution
 
-You can open a [bug](https://github.com/QuiiBz/react-use-suspense/issues/new?assignees=&labels=bug&template=bug_report.md&title=) issue, or request a new [feature](https://github.com/QuiiBz/particule/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
+You can open a [bug](https://github.com/QuiiBz/react-use-suspense/issues/new?assignees=&labels=bug&template=bug_report.md&title=) issue, or request a new [feature](https://github.com/QuiiBz/react-use-suspense/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
 
 ## Development contribution
 
